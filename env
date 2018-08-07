@@ -1,0 +1,12 @@
+// mongodb conf
+DB_USER=
+DB_PASS=
+DB_HOST=localhost
+DB_NAME=tutorial
+DB_PORT=27017
+
+
+
+// gmail server smtp
+SMTP_USER=
+SMTP_PASS=
