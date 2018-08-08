@@ -6,6 +6,15 @@ function urls(app){
     app.use('/common', commonRouter);
     app.use('/', userRouter);
 
+    app.use('/fa', function (req, res) {
+        res.cookie.locale = 'fa';
+        res.redirect('/');
+    });
+    app.use('/en', function (req, res) {
+        res.cookie.locale = 'en';
+        res.redirect('/');
+    });
+
     // catch 404 and forward to error handler
     app.use(function(req, res) {
         res.status(404);

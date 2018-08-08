@@ -3,11 +3,13 @@ const express = require('express');
 const router = express.Router();
 
 const passport = setting.passport;
+const {message} = require('./messages');
 
 
 // show the home page (will also have our login links)
 router.get('/', function(req, res) {
-    res.render('index.pug');
+    // res.render('index.pug');
+    res.send(message().hi);
 });
 
 // PROFILE SECTION =========================

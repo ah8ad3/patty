@@ -3,8 +3,11 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const passport = require('passport');
 const log = require('../lib/log');
+const locale_md = require('../lib/locale_middleware');
 const session = require('express-session');
+
 const flash = require('connect-flash');
+const {internal} = require('./messages');
 
 
 const secret_key = 'ajhbksjna3rq9efyeohqe0';
@@ -31,17 +34,20 @@ function settings(app, express){
     app.use(flash()); // use connect-flash for flash messages stored in session
     require('../lib/passport')(passport);
 
+    // locale middleware
+    app.use(locale_md);
+
     // import database here
     require('./database');
 
-    log.info('settings imported');
+    log.info(internal.setting_import);
 }
 
 
 const googleAuth = {
-    clientID: '485355207592-tl1c7ft0eia7c1vu4q2iuqtksms1ega5.apps.googleusercontent.com',
-    clientSecret: 'GLrzF6gxU6bruiRyPBhqAXyT',
-    callbackURL: 'http://localhost:5000/auth/google/callback'
+    clientID: process.env.OA_CLIENT_ID,
+    clientSecret: process.env.OA_CLIENT_SECRET,
+    callbackURL: process.env.OA_CALLBACK
 };
 
 module.exports = {
