@@ -1,6 +1,6 @@
 const i18n = require('../../settings/i18');
 
-const m = function () {
+const m = () => {
     return {
         hi: i18n.__('hey money')
     }

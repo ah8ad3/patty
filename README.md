@@ -8,14 +8,14 @@ for easy authentication and api usage in mvc
 - email smtp with node mailer
 - jade html template renderer
 - translation with i18n in standard mode
+- cli added potty.js
 
 
 # Todo:
 - add test
-- create cli tool
 
 
 # usage:
 copy env file to .env file and put values 
 run `npm install`
-then run `npm start` and server run in `localhost:5000`
+then run `npm start` and server run in `http://localhost:5000`
