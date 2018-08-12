@@ -21,3 +21,8 @@ PD_FLAG=dev
 
 // project secret key
 SECRET_KEY=
+
+
+// session redis #1
+REDIS_SES_HOST=
+REDIS_SES_PORT=6379

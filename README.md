@@ -11,10 +11,14 @@ this is not a new framework this is just express js and we just make it easy to 
 - translation with i18n in standard mode
 - cli added potty.js
 - google oauth support
+- define dev or production mode easy in env file
+for production mode you can use [strong pm](http://strong-pm.io/) that restart youre app when crashed
+also we create an simple `production.bash` use [cross-env](https://www.npmjs.com/package/cross-env)
+library for run perfectly on windows and linux on production mode
+you can add more flags as you need
 
 
 # Todo:
-- add production mode
 - add test
 - make contribution table
 - create an library called potty and add all features to it
