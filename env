@@ -13,3 +13,11 @@ SMTP_PASS=
 OA_CLIENT_ID=
 OA_CLIENT_SECRET=
 OA_CALLBACK=
+
+
+// project production or develope mode `dev` or `pro`
+PD_FLAG=dev
+
+
+// project secret key
+SECRET_KEY=

@@ -7,11 +7,11 @@ function urls(app){
     app.use('/', userRouter);
 
     app.use('/fa', function (req, res) {
-        res.cookie.locale = 'fa';
+        res.cookie('locale', 'fa');
         res.redirect('/');
     });
     app.use('/en', function (req, res) {
-        res.cookie.locale = 'en';
+        res.cookie('locale', 'en');
         res.redirect('/');
     });
 
