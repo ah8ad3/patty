@@ -1,5 +1,6 @@
 const fs = require('fs');
 const program = require('commander');
+const {exec} = require('child_process');
 
 if (!fs.existsSync('app/')) {
     fs.mkdirSync('app/');
@@ -9,6 +10,9 @@ program
     .version('0.1.0')
     .option('-c, --create-app [app_name]', 'Add name for app', false)
     .option('-t, --test', 'Test run')
+    .option('-i, --install', 'Install dependency')
+    .option('-p, --production', 'Start server in production mode')
+    .option('-d, --dev', 'Start server in develop mode')
     .parse(process.argv);
 
 // -c command code check if app doesn't exist create app
@@ -36,4 +40,45 @@ if (program.test) {
     * need to first test structure then create this
     * */
     console.log('test in construction');
+}
+
+
+if (program.install) {
+    exec('npm install\n' +
+        'npm install -g strongloop cross-env\n', (err, stdout, stderr) => {
+        if (err) {
+            // node couldn't execute the command
+            return;
+        }
+
+        // the *entire* stdout and stderr (buffered)
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+    });
+}
+
+if (program.dev) {
+    exec('node bin/www', (err, stdout, stderr) => {
+        if (err) {
+            // node couldn't execute the command
+            return;
+        }
+
+        // the *entire* stdout and stderr (buffered)
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+    })
+}
+
+if (program.production) {
+    exec('cross-env NODE_ENV=production slc run bin/www', (err, stdout, stderr) => {
+        if (err) {
+            // node couldn't execute the command
+            return;
+        }
+
+        // the *entire* stdout and stderr (buffered)
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+    })
 }
