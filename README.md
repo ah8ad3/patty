@@ -1,4 +1,7 @@
 # potty
+[![Build Status](https://travis-ci.org/istanbuljs/nyc.svg?branch=master)](https://travis-ci.org/istanbuljs/nyc)
+
+
 lightweight express js tool 
 for easy authentication and api usage in mvc
 this is not a new framework this is just express js and we just make it easy to use
@@ -17,10 +20,11 @@ also we create an simple `production.bash` use [cross-env](https://www.npmjs.com
 library for run perfectly on windows and linux on production mode
 you can add more flags as you need
 - redis support for session or cache
+- test added but some docs needed, for coverage test just use [nyc](https://www.npmjs.com/package/nyc)
+with this command `nyc npm test` 
 
 
 # Todo:
-- add test
 - make contribution table
 - create an library called potty and add all features to it
 - add sql ability for db
@@ -28,6 +32,8 @@ you can add more flags as you need
 - add queue 
 - add graphql ability for request and db
 - merge some small dependency to main library
+- add docker-compose
+- planning for use some automatic tools for bundle
 - ...
 
 

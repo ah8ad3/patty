@@ -12,41 +12,56 @@ router.get('/', function(req, res) {
     res.send(message().hi);
 });
 
-// PROFILE SECTION =========================
 router.get('/profile', isLoggedIn, function(req, res) {
     res.render('profile.pug', {
         user : req.user
     });
 });
 
-// LOGOUT ==============================
 router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
 });
 
-// locally --------------------------------
+// local section -----------
 router.get('/login', function(req, res) {
-    res.render('login.pug', { message: req.flash('loginMessage') });
+    res.render('login.pug');
 });
 
-// process the login form
-router.post('/login', passport.authenticate('local-login', {
-    successRedirect : '/profile', // redirect to the secure profile section
-    failureRedirect : '/login', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
-}));
+router.post('/login', function(req, res, next) {
+    passport.authenticate('local-login', function(err, user, info) {
+        if (err) {
+            res.status(500).send({error: message().server_error})
+        }
+        // Generate a JSON response reflecting authentication status
+        if (user === false) {
+            res.status(400).send({error: message().wrong_login});
+        }
+        req.login(user, function(err) {
+            if (err) { return next(err); }
+            return res.redirect('/profile');
+        });
+    })(req, res, next);
+});
+
 
 router.get('/register', function(req, res) {
     res.render('register.pug', { message: req.flash('SignUpMessage') });
 });
 
-// process the register form
-router.post('/register', passport.authenticate('local-signup', {
-    successRedirect : '/profile', // redirect to the secure profile section
-    failureRedirect : '/register', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
-}));
+
+router.post('/register', function(req, res, next) {
+    passport.authenticate('local-signup', function(err, user, info) {
+        if (err) {
+            res.status(500).send({error: message().server_error})
+        }
+        else if (user === false) {
+            res.status(400).send({error: message().email_taken});
+        }else {
+            res.status(201).send(message().register_suc);
+        }
+    })(req, res, next);
+});
 
 // google ---------------------------------
 router.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));

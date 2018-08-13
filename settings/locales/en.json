@@ -7,5 +7,9 @@
 	"Error in DB_FLAG not found or have incorrect value, must be `pro` or `dev` fix it in .env file": "Error in DB_FLAG not found or have incorrect value, must be `pro` or `dev` fix it in .env file",
 	"Secret key must be defined in .env and have more than 6 length": "Secret key must be defined in .env and have more than 6 length",
 	"Error in redis connection, or in flash": "Error in redis connection, or in flash",
-	"Error in redis connection": "Error in redis connection"
+	"Error in redis connection": "Error in redis connection",
+	"Server Error": "Server Error",
+	"Email or Password wrong": "Email or Password wrong",
+	"This email already token": "This email already token",
+	"Register successfully": "Register successfully"
 }

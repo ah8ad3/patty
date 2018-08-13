@@ -54,9 +54,20 @@ let debug = (app, express) => {
     }));
 
     log.danger(internal.loaded_in_dev);
-
-    return app;
 };
+
+let test = (app, express) => {
+    // should use nginx or apache instead
+    app.use(express.static(path.join(__dirname, '../statics')));
+
+    // authentication
+    app.use(session({
+        secret: secret_key, // session secret
+        resave: true,
+        saveUninitialized: true,
+    }));
+};
+
 
 function settings(app, express){
     // view engine setup
@@ -69,8 +80,11 @@ function settings(app, express){
 
     }else if (process.env.PD_FLAG === 'pro') {
         production(app);
-        // should use nginx or apache instead
+        // Temporary
         app.use(express.static(path.join(__dirname, '../statics')));
+
+    } else if (process.env.PD_FLAG === 'test'){
+        test(app, express);
 
     } else {
         log.danger(internal.in_db_flag_error);
