@@ -1,6 +1,5 @@
 # potty
-[![Build Status](https://travis-ci.org/istanbuljs/nyc.svg?branch=master)](https://travis-ci.org/istanbuljs/nyc)
-
+[![Build Status](https://travis-ci.org/ah8ad3/potty.svg?branch=master)](https://travis-ci.org/ah8ad3/potty)
 
 lightweight express js tool 
 for easy authentication and api usage in mvc
