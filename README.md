@@ -16,6 +16,7 @@ for production mode you can use [strong pm](http://strong-pm.io/) that restart y
 also we create an simple `production.bash` use [cross-env](https://www.npmjs.com/package/cross-env)
 library for run perfectly on windows and linux on production mode
 you can add more flags as you need
+- redis support for session or cache
 
 
 # Todo:
@@ -37,3 +38,5 @@ then run `npm start` and server run in `http://localhost:5000`
 
 this project run with node version 10.8.0
 and npm version 6.3.0 without any problem
+
+This repo is free to use with only cite 
