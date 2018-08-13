@@ -11,7 +11,7 @@ this is not a new framework this is just express js and we just make it easy to 
 - email smtp with node mailer
 - jade html template renderer
 - translation with i18n in standard mode
-- cli added potty.js
+- cli potty.js
 - google oauth support
 - define dev or production mode easy in env file
 for production mode you can use [strong pm](http://strong-pm.io/) that restart youre app when crashed
@@ -21,6 +21,7 @@ you can add more flags as you need
 - redis support for session or cache
 - test added but some docs needed, for coverage test just use [nyc](https://www.npmjs.com/package/nyc)
 with this command `nyc npm test` 
+- docker-compose for production mode
 
 
 # Todo:
@@ -31,7 +32,6 @@ with this command `nyc npm test`
 - add queue 
 - add graphql ability for request and db
 - merge some small dependency to main library
-- add docker-compose
 - planning for use some automatic tools for bundle
 - ...
 
