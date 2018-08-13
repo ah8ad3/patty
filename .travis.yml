@@ -4,4 +4,4 @@ node_js:
 - "stable"
 
 script:
-- "npm start"
+- "npm test"
