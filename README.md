@@ -25,19 +25,18 @@ with this command `nyc npm test`
 
 
 # Todo:
-- make contribution table
-- create an library called potty and add all features to it
-- add sql ability for db
-- add django like admin page
-- add queue 
-- add graphql ability for request and db
-- merge some small dependency to main library
-- planning for use some automatic tools for bundle
-- ...
+- add queue (there is many queue library like kue, queue,... you can use by yore need)
+- permission system (i done this before but i think not need for this repo and i decide to make this repo easy for all)
+- add sql ability for db(this implement in external repo as need)
+- add graphql ability for request and db (this implement in external repo as need)
+- if you have any offer for improve this repo i glad to hear it with me gmail
+- i implement some simple project with this repo and add later 
 
 
 # usage:
-clone project copy env file to .env file and put values 
+clone project copy env file to .env file and put values
+don't forget to put secret key
+ 
 run `npm install`
 then run `npm start` and server run in `http://localhost:5000`
 
