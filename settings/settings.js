@@ -15,6 +15,11 @@ if (secret_key === undefined || secret_key === '' || secret_key.length < 6){
     process.exit();
 }
 
+if (process.env.DB_NAME === undefined || process.env.DB_NAME === ''){
+    log.danger(internal.secret_key_error);
+    process.exit();
+}
+
 
 let production = (app) => {
     // check if redis connected or not

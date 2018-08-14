@@ -10,9 +10,9 @@ SMTP_USER=
 SMTP_PASS=
 
 // google oauth
-OA_CLIENT_ID=
-OA_CLIENT_SECRET=
-OA_CALLBACK=
+OA_CLIENT_ID=1
+OA_CLIENT_SECRET=1
+OA_CALLBACK=1
 
 
 // project production or develope mode `dev` or `pro`
