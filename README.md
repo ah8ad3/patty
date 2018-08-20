@@ -23,11 +23,13 @@ you can add more flags as you need
 with this command `nyc npm test` 
 - docker-compose for production mode
 - sentry for error handling, only in global mode you can write youre custom exception handler
+- super easy way to enable and use socket io in project
 - cors header support for all or some routes or custom origin
 
 
 # Todo:
 - redis cache
+- planning to add free and secure ssl (maybe in external project or here)
 - add queue (there is many queue library like kue, queue,... you can use by yore need)
 - permission system (i done this before but i think not need for this repo and i decide to make this repo easy for all)
 - add sql ability for db(this implement in external repo as need)

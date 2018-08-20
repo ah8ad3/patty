@@ -1,8 +1,9 @@
 const commonRouter = require('../app/common/routes');
 const userRouter = require('../app/user/routes');
 
+const log = require('../lib/log');
 
-function urls(app){
+function urls(app, io){
     app.use('/common', commonRouter);
     app.use('/', userRouter);
 
@@ -14,6 +15,21 @@ function urls(app){
         res.cookie('locale', 'en');
         res.redirect('/');
     });
+
+    // socket come here, you can add more things by adding this section in you're apps or anywhere and make it easy
+    // this is super easy template
+    if (process.env.SOCKET_USE === '1' && io !== undefined)  {
+        io.on('connection', (socket) => {
+            let address = socket.handshake.address;
+            let id = socket.id;
+            log.regular(`New connection from ${address} and id ${id}`);
+            socket.emit('welcome', 'Welcome user, this sent from server');
+
+            socket.on('disconnect', () => {
+                log.regular(`Connection from ${address}  and id ${id} closed`);
+            })
+        })
+    }
 
     // catch 404 and forward to error handler
     app.use(function(req, res) {

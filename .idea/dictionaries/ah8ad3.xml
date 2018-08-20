@@ -2,6 +2,7 @@
   <dictionary name="ah8ad3">
     <words>
       <w>bcrypt</w>
+      <w>cors</w>
       <w>gmail</w>
       <w>resave</w>
       <w>signup</w>

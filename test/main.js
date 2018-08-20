@@ -4,7 +4,7 @@ process.env.PD_FLAG = 'test';
 //Require the dev-dependencies
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-let server = require('../app');
+let {app} = require('../app');
 chai.should();
 
 chai.use(chaiHttp);
@@ -15,4 +15,4 @@ chai.use(chaiHttp);
 
 
 // test for user app
-require('../app/user/test')(chai, server);
+require('../app/user/test')(chai, app);
