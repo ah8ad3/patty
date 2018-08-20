@@ -26,3 +26,8 @@ SECRET_KEY=
 // session redis #1
 REDIS_SES_HOST=
 REDIS_SES_PORT=6379
+
+
+// raven
+RAVEN_NAME=
+RAVEN_KEY=

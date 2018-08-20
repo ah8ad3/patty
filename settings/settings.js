@@ -5,6 +5,8 @@ const log = require('../lib/log');
 const locale_md = require('../lib/locale_middleware');
 const session = require('express-session');
 const compression = require('compression');
+const Raven = require('raven');
+const cors = require('cors');
 
 const flash = require('connect-flash');
 const {internal} = require('./messages');
@@ -40,6 +42,8 @@ let production = (app) => {
         saveUninitialized: true,
         resave: false
     }));
+
+    Raven.config(`https://${process.env.RAVEN_KEY}@sentry.io/${process.env.RAVEN_NAME}`).install();
 };
 
 let debug = (app, express) => {
@@ -103,6 +107,9 @@ function settings(app, express){
     app.use(passport.initialize());
     app.use(passport.session()); // persistent login sessions
     app.use(flash()); // use connect-flash for flash messages stored in session
+
+    // cors header support for all headers
+    app.use(cors());
 
     require('../lib/passport')(passport);
 

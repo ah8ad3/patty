@@ -22,13 +22,12 @@ you can add more flags as you need
 - test added but some docs needed, for coverage test just use [nyc](https://www.npmjs.com/package/nyc)
 with this command `nyc npm test` 
 - docker-compose for production mode
+- sentry for error handling, only in global mode you can write youre custom exception handler
+- cors header support for all or some routes or custom origin
 
 
 # Todo:
 - redis cache
-- opbeat
-- cors header
-- sentry for production mode 
 - add queue (there is many queue library like kue, queue,... you can use by yore need)
 - permission system (i done this before but i think not need for this repo and i decide to make this repo easy for all)
 - add sql ability for db(this implement in external repo as need)
