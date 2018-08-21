@@ -18,6 +18,8 @@ if (process.env.PD_FLAG === 'test') {
     process.env.DB_NAME = 'test_potty';
     process.env.DB_HOST = 'localhost';
     process.env.DB_PORT = '27017';
+    process.env.REDIS_SES_HOST='localhost';
+    process.env.REDIS_SES_PORT='6379'
 }
 
 if (secret_key === undefined || secret_key === '' || secret_key.length < 6){

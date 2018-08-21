@@ -19,3 +19,9 @@ require('../app/user/test')(chai, app);
 
 // test for common app
 require('../app/common/test')(chai, app);
+
+// test for settings
+require('../settings/test')(chai, app);
+
+// test libs
+require('../lib/test')(chai, app);
