@@ -4,6 +4,7 @@ const router = express.Router();
 
 const passport = setting.passport;
 const {message} = require('./messages');
+const validator = require('validator');
 
 
 // show the home page (will also have our login links)
@@ -29,19 +30,27 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/login', function(req, res, next) {
-    passport.authenticate('local-login', function(err, user, info) {
-        if (err) {
-            res.status(500).send({error: message().server_error})
-        }
-        // Generate a JSON response reflecting authentication status
-        if (user === false) {
-            res.status(400).send({error: message().wrong_login});
-        }
-        req.login(user, function(err) {
-            if (err) { return next(err); }
-            return res.redirect('/profile');
-        });
-    })(req, res, next);
+    let email = req.body.email;
+    let pass = req.body.password;
+    if (validator.isEmail(email) || validator.isEmpty(pass) === false) {
+        passport.authenticate('local-login', function (err, user, info) {
+            if (err) {
+                res.status(500).send({error: message().server_error})
+            }
+            // Generate a JSON response reflecting authentication status
+            if (user === false) {
+                res.status(400).send({error: message().wrong_login});
+            }
+            req.login(user, function (err) {
+                if (err) {
+                    return next(err);
+                }
+                return res.redirect('/profile');
+            });
+        })(req, res, next);
+    }else {
+        res.status(400).send({error: message().input_format})
+    }
 });
 
 
@@ -51,16 +60,22 @@ router.get('/register', function(req, res) {
 
 
 router.post('/register', function(req, res, next) {
-    passport.authenticate('local-signup', function(err, user, info) {
-        if (err) {
-            res.status(500).send({error: message().server_error})
-        }
-        else if (user === false) {
-            res.status(400).send({error: message().email_taken});
-        }else {
-            res.status(201).send(message().register_suc);
-        }
-    })(req, res, next);
+    let email = req.body.email;
+    let pass = req.body.password;
+    if (validator.isEmail(email) || validator.isEmpty(pass) === false) {
+        passport.authenticate('local-signup', function(err, user, info) {
+            if (err) {
+                res.status(500).send({error: message().server_error})
+            }
+            else if (user === false) {
+                res.status(400).send({error: message().email_taken});
+            }else {
+                res.status(201).send(message().register_suc);
+            }
+        })(req, res, next);
+    }else {
+        res.status(400).send({error: message().input_format})
+    }
 });
 
 // google ---------------------------------
@@ -120,7 +135,7 @@ router.get('/unlink/google', isLoggedIn, function(req, res) {
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated())
         return next();
-    res.redirect('/login');
+    res.status(401).send(message().unauthorized);
 }
 
 

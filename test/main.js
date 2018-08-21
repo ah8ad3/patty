@@ -16,3 +16,6 @@ chai.use(chaiHttp);
 
 // test for user app
 require('../app/user/test')(chai, app);
+
+// test for common app
+require('../app/common/test')(chai, app);
