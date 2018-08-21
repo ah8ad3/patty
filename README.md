@@ -1,5 +1,6 @@
 # potty
 [![Build Status](https://travis-ci.org/ah8ad3/potty.svg?branch=master)](https://travis-ci.org/ah8ad3/potty)
+[![Coverage Status](https://coveralls.io/repos/github/ah8ad3/potty/badge.svg)](https://coveralls.io/github/ah8ad3/potty)
 
 lightweight express js tool 
 for easy authentication and api usage in mvc
