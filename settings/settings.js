@@ -11,14 +11,22 @@ const cors = require('cors');
 const flash = require('connect-flash');
 const {internal} = require('./messages');
 
-const secret_key = process.env.SECRET_KEY;
+let secret_key = process.env.SECRET_KEY;
+
+if (process.env.PD_FLAG === 'test') {
+    secret_key = 'thisisantestkey';
+    process.env.DB_NAME = 'test_potty';
+    process.env.DB_HOST = 'localhost';
+    process.env.DB_PORT = '27017';
+}
+
 if (secret_key === undefined || secret_key === '' || secret_key.length < 6){
     log.danger(internal.secret_key_error);
     process.exit();
 }
 
 if (process.env.DB_NAME === undefined || process.env.DB_NAME === ''){
-    log.danger(internal.secret_key_error);
+    log.danger(internal.db_name_missed);
     process.exit();
 }
 
@@ -115,11 +123,19 @@ function settings(app, express){
 }
 
 
-const googleAuth = {
+let googleAuth = {
     clientID: process.env.OA_CLIENT_ID,
     clientSecret: process.env.OA_CLIENT_SECRET,
     callbackURL: process.env.OA_CALLBACK
 };
+
+if (process.env.PD_FLAG === 'test') {
+    googleAuth = {
+        clientID: 'test',
+        clientSecret: 'test',
+        callbackURL: 'test.test'
+    }
+}
 
 const private_storage = 'assets/media/private/';
 
