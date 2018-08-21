@@ -1,9 +1,11 @@
+const path = require('path');
+
 const commonRouter = require('../app/common/routes');
 const userRouter = require('../app/user/routes');
 
 const log = require('../lib/log');
 
-function urls(app, io){
+function urls(app, io, express){
     app.use('/common', commonRouter);
     app.use('/', userRouter);
 
@@ -15,6 +17,15 @@ function urls(app, io){
         res.cookie('locale', 'en');
         res.redirect('/');
     });
+
+    if (process.env.PD_FLAG === 'dev' || process.env.PD_FLAG === 'test') {
+        // should use nginx or apache instead
+        app.use('/static', express.static(path.join(__dirname, '../assets/statics')));
+
+        // should use nginx or apache instead
+        app.use('/media', express.static(path.join(__dirname, '../assets/media/public')));
+
+    }
 
     // socket come here, you can add more things by adding this section in you're apps or anywhere and make it easy
     // this is super easy template

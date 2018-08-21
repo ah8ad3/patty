@@ -6,5 +6,6 @@
 	"Server Error": "خطا در سرور",
 	"Email or Password wrong": "ایمیل یا گذرواژه شما اشتباه است",
 	"This email already token": "این ایمیل قبلا گرفته شده است",
-	"Register successfully": "ثبت نام موفقیت آمیز"
+	"Register successfully": "ثبت نام موفقیت آمیز",
+	"Not Found": "سندی پیدا نشد"
 }

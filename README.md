@@ -25,6 +25,7 @@ with this command `nyc npm test`
 - sentry for error handling, only in global mode you can write youre custom exception handler
 - super easy way to enable and use socket io in project
 - cors header support for all or some routes or custom origin
+- using private and public media files
 
 
 # Todo:

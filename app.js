@@ -3,26 +3,16 @@ const app = express();
 require('dotenv').config();
 const set = require('./settings/settings');
 
-
-const http = require('http');
-const log = require('./lib/log');
-const server = http.createServer(app);
-
-let io = undefined;
-if (process.env.SOCKET_USE === '1'){
-    io = require('socket.io')(server);
-    log.info('using socket io')
-}
-
+const http_server = require('./lib/http_server')(app);
 
 // import all settings here
 set.settings(app, express);
 
 // import urls to project
-require('./settings/urls')(app, io);
+require('./settings/urls')(app, http_server.io, express);
 
 
 module.exports = {
     app: app,
-    server: server
+    server: http_server.server
 };

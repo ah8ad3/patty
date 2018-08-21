@@ -46,14 +46,11 @@ let production = (app) => {
     Raven.config(`https://${process.env.RAVEN_KEY}@sentry.io/${process.env.RAVEN_NAME}`).install();
 };
 
-let debug = (app, express) => {
+let debug = (app) => {
     const logger = require('morgan');
 
     // logger for requests
     app.use(logger('dev'));
-
-    // should use nginx or apache instead
-    app.use(express.static(path.join(__dirname, '../statics')));
 
     // authentication
     app.use(session({
@@ -65,10 +62,7 @@ let debug = (app, express) => {
     log.danger(internal.loaded_in_dev);
 };
 
-let test = (app, express) => {
-    // should use nginx or apache instead
-    app.use(express.static(path.join(__dirname, '../statics')));
-
+let test = (app) => {
     // authentication
     app.use(session({
         secret: secret_key, // session secret
@@ -80,20 +74,18 @@ let test = (app, express) => {
 
 function settings(app, express){
     // view engine setup
-    app.set('views', path.join(__dirname, '../templates'));
+    app.set('views', path.join(__dirname, '../assets/templates'));
     app.set('view engine', 'pug');
 
     // dev flag set on settings
     if (process.env.PD_FLAG === 'dev'){
-        debug(app, express);
+        debug(app);
 
     }else if (process.env.PD_FLAG === 'pro') {
         production(app);
-        // Temporary
-        app.use(express.static(path.join(__dirname, '../statics')));
 
     } else if (process.env.PD_FLAG === 'test'){
-        test(app, express);
+        test(app);
 
     } else {
         log.danger(internal.in_db_flag_error);
@@ -129,9 +121,12 @@ const googleAuth = {
     callbackURL: process.env.OA_CALLBACK
 };
 
+const private_storage = 'assets/media/private/';
+
 module.exports = {
     settings: settings,
     secret_key: secret_key,
     googleAuth: googleAuth,
-    passport: passport
+    passport: passport,
+    p_storage: private_storage
 };
