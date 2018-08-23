@@ -20,7 +20,7 @@ if (process.env.PD_FLAG === 'test') {
     process.env.DB_PORT = '27017';
     process.env.REDIS_SES_HOST='localhost';
     process.env.REDIS_SES_PORT='6379';
-    process.env.SOCKET_USE = 1;
+    process.env.SOCKET_USE = '1';
 }
 
 if (secret_key === undefined || secret_key === '' || secret_key.length < 6){
