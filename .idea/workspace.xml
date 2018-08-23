@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7c0718c-492c-4832-9400-5faa87d0e0c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="a7c0718c-492c-4832-9400-5faa87d0e0c6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -22,7 +15,7 @@
     <session id="1261604037">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -134,8 +127,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settings/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="253">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -288,7 +281,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="27" />
     <option name="width" value="1366" />
     <option name="height" value="741" />
@@ -423,16 +416,15 @@
       <workItem from="1534828468406" duration="7083000" />
       <workItem from="1534836408373" duration="188000" />
       <workItem from="1534836882653" duration="2793000" />
-      <workItem from="1534840979645" duration="6098000" />
+      <workItem from="1534840979645" duration="6225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97634000" />
+    <option name="totallyTimeSpent" value="97761000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="1" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16008936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -873,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="253">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
