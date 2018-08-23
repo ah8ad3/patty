@@ -9,4 +9,4 @@ services:
 script:
 - "npm run test-ci"
 
-after_script: "npm install coveralls@2.10.0 && npm audit fix --force && cat ./coverage/lcov.info | coveralls"
+after_script: "npm install coveralls@2.10.0 && npm audit fix && cat ./coverage/lcov.info | coveralls"
