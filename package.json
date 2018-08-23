@@ -1,13 +1,14 @@
 {
   "name": "patty",
-  "version": "0.3.2",
+  "version": "0.3.5",
   "author": "ah8ad3",
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
     "test": "./node_modules/mocha/bin/_mocha --exit",
-    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly --  --reporter spec --exit"
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly --  --reporter spec --exit",
+    "test-local": "nyc npm test"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
