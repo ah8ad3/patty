@@ -41,6 +41,7 @@
     "raven": "^2.6.3",
     "redis": "^2.8.0",
     "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
     "validator": "^10.6.0"
   }
 }

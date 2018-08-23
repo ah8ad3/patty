@@ -38,7 +38,8 @@ function urls(app, io, express){
 
             socket.on('disconnect', () => {
                 log.regular(`Connection from ${address}  and id ${id} closed`);
-            })
+            });
+            socket.close()
         })
     }
 
