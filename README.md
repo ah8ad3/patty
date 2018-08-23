@@ -1,6 +1,6 @@
-# potty
-[![Build Status](https://travis-ci.org/ah8ad3/potty.svg?branch=master)](https://travis-ci.org/ah8ad3/potty)
-[![Coverage Status](https://coveralls.io/repos/github/ah8ad3/potty/badge.svg)](https://coveralls.io/github/ah8ad3/potty)
+# patty
+[![Build Status](https://travis-ci.org/ah8ad3/patty.svg?branch=master)](https://travis-ci.org/ah8ad3/patty)
+[![Coverage Status](https://coveralls.io/repos/github/ah8ad3/patty/badge.svg)](https://coveralls.io/github/ah8ad3/patty)
 
 lightweight express js tool 
 for easy authentication and api usage in mvc
@@ -12,7 +12,7 @@ this is not a new framework this is just express js and we just make it easy to 
 - email smtp with node mailer
 - jade html template renderer
 - translation with i18n in standard mode
-- cli potty.js
+- cli patty.js
 - google oauth support
 - define dev or production mode easy in env file
 for production mode you can use [strong pm](http://strong-pm.io/) that restart youre app when crashed
