@@ -7,7 +7,7 @@ if (!fs.existsSync('app/')) {
 }
 
 program
-    .version('0.1.0')
+    .version('0.5.0')
     .option('-c, --create-app [app_name]', 'Add name for app', false)
     .option('-t, --test', 'Test run')
     .option('-i, --install', 'Install dependency')
@@ -36,10 +36,7 @@ if (program.createApp === true) {
 
 // test
 if (program.test) {
-    /*
-    * need to first test structure then create this
-    * */
-    console.log('test in construction');
+    exec('npm test')
 }
 
 

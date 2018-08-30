@@ -3,7 +3,7 @@ const path = require('path');
 const commonRouter = require('../app/common/routes');
 const userRouter = require('../app/user/routes');
 
-const log = require('../lib/log');
+const patty = require('../lib/patty');
 
 function urls(app, io, express){
     app.use('/common', commonRouter);
@@ -33,11 +33,11 @@ function urls(app, io, express){
         io.on('connection', (socket) => {
             let address = socket.handshake.address;
             let id = socket.id;
-            log.regular(`New connection from ${address} and id ${id}`);
+            patty.log.regular(`New connection from ${address} and id ${id}`);
             socket.emit('welcome', 'Welcome user, this sent from server');
 
             socket.on('disconnect', () => {
-                log.regular(`Connection from ${address}  and id ${id} closed`);
+                patty.log.regular(`Connection from ${address}  and id ${id} closed`);
             });
             socket.close()
         })

@@ -6,6 +6,6 @@ COPY . .
 
 RUN npm install
 
-CMD [ "node", "potty.js", "-d" ]
+CMD [ "node", "patty.js", "-d" ]
 
 # fast development use docker, production mode with docker-compose added in `docker-compose` directory

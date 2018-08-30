@@ -11,7 +11,7 @@ services:
       - YARN=false
     volumes:
     - ../:/opt/app
-    entrypoint: run-nodock "../node potty.js -p"
+    entrypoint: run-nodock "../node patty.js -p"
     tty: true
 
   mongo:

@@ -1,8 +1,7 @@
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
-const log = require('../lib/log');
-const locale_md = require('../lib/locale_middleware');
+const patty = require('../lib/patty');
 const session = require('express-session');
 const compression = require('compression');
 const Raven = require('raven');
@@ -21,15 +20,18 @@ if (process.env.PD_FLAG === 'test') {
     process.env.REDIS_SES_HOST='localhost';
     process.env.REDIS_SES_PORT='6379';
     process.env.SOCKET_USE = '1';
+    process.env.OA_CLIENT_ID = 'test';
+    process.env.OA_CLIENT_SECRET = 'test';
+    process.env.OA_CALLBACK = 'test.test'
 }
 
 if (secret_key === undefined || secret_key === '' || secret_key.length < 6){
-    log.danger(internal.secret_key_error);
+    patty.log.danger(internal.secret_key_error);
     process.exit();
 }
 
 if (process.env.DB_NAME === undefined || process.env.DB_NAME === ''){
-    log.danger(internal.db_name_missed);
+    patty.log.danger(internal.db_name_missed);
     process.exit();
 }
 
@@ -70,7 +72,7 @@ let debug = (app) => {
         saveUninitialized: true,
     }));
 
-    log.danger(internal.loaded_in_dev);
+    patty.log.danger(internal.loaded_in_dev);
 };
 
 let test = (app) => {
@@ -117,35 +119,23 @@ function settings(app, express){
     require('../lib/passport')(passport);
 
     // locale middleware
-    app.use(locale_md);
+    app.use(patty.locale_md);
 
     // import database here
     require('./database');
 
-    log.info(internal.setting_import);
+    patty.log.info(internal.setting_import);
 }
 
-
-let googleAuth = {
-    clientID: process.env.OA_CLIENT_ID,
-    clientSecret: process.env.OA_CLIENT_SECRET,
-    callbackURL: process.env.OA_CALLBACK
-};
-
-if (process.env.PD_FLAG === 'test') {
-    googleAuth = {
-        clientID: 'test',
-        clientSecret: 'test',
-        callbackURL: 'test.test'
-    }
-}
 
 const private_storage = 'assets/media/private/';
+
+const jwt_expire = 86400;  // 24 hours
 
 module.exports = {
     settings: settings,
     secret_key: secret_key,
-    googleAuth: googleAuth,
     passport: passport,
-    p_storage: private_storage
+    p_storage: private_storage,
+    jwt_expire: jwt_expire
 };
