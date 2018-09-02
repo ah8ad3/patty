@@ -22,7 +22,9 @@ if (process.env.PD_FLAG === 'test') {
     process.env.SOCKET_USE = '1';
     process.env.OA_CLIENT_ID = 'test';
     process.env.OA_CLIENT_SECRET = 'test';
-    process.env.OA_CALLBACK = 'test.test'
+    process.env.OA_CALLBACK = 'test.test';
+    process.env.REDIS_CACHE_PORT = '6379';
+    process.env.REDIS_CACHE_HOST = 'localhost'
 }
 
 if (secret_key === undefined || secret_key === '' || secret_key.length < 6){
