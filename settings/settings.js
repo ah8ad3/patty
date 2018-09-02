@@ -132,10 +132,26 @@ const private_storage = 'assets/media/private/';
 
 const jwt_expire = 86400;  // 24 hours
 
+let cache;
+if (process.env.REDIS_CACHE_PORT){
+    // check if redis connected or not
+    require('./_redis');
+
+    cache = require('express-redis-cache')({
+        host: process.env.REDIS_CACHE_HOST, port: process.env.REDIS_CACHE_PORT
+    });
+    patty.log.info('using cache')
+}else {
+    patty.log.danger('Cache cant use, complete redis for cache in environment');
+    process.exit()
+}
+
+
 module.exports = {
     settings: settings,
     secret_key: secret_key,
     passport: passport,
     p_storage: private_storage,
-    jwt_expire: jwt_expire
+    jwt_expire: jwt_expire,
+    cache: cache
 };

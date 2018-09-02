@@ -5,12 +5,19 @@ const router = express.Router();
 const passport = setting.passport;
 const {message} = require('./messages');
 const validator = require('validator');
+const {UserModel} = require('./models');
 
 
 // show the home page (will also have our login links)
 router.get('/', function(req, res) {
     // res.render('index.pug');
     res.send(message().hi);
+});
+
+router.get('/users', setting.cache.route(5000), function (req, res) {
+    UserModel.find({}, function (err, data) {
+        res.send(data)
+    })
 });
 
 router.get('/profile', isLoggedIn, function(req, res) {

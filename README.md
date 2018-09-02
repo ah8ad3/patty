@@ -27,10 +27,10 @@ with this command `nyc npm test`
 - super easy way to enable and use socket io in project
 - cors header support for all or some routes or custom origin
 - using private and public media files
+- using cache for routes with redis
 
 
 # Todo:
-- redis cache
 - planning to add free and secure ssl (maybe in external project or here)
 - add queue (there is many queue library like kue, queue,... you can use by yore need)
 - permission system (i done this before but i think not need for this repo and i decide to make this repo easy for all)
