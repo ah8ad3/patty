@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7c0718c-492c-4832-9400-5faa87d0e0c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/user/api_v10/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/user/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/user/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jwt_middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jwt_middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/obtain_token.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/obtain_token.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/settings/urls.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -150,13 +154,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="2" />
-          <entry key="js" value="18" />
+          <entry key="js" value="21" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="18" />
+          <entry key="JavaScript" value="21" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
@@ -164,7 +168,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="124" />
-          <entry key="js" value="1023" />
+          <entry key="js" value="1871" />
           <entry key="json" value="9" />
           <entry key="md" value="38" />
         </counts>
@@ -172,7 +176,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="1023" />
+          <entry key="JavaScript" value="1871" />
           <entry key="Markdown" value="38" />
           <entry key="PLAIN_TEXT" value="124" />
         </counts>
@@ -191,19 +195,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/user/test.js">
+        <entry file="file://$PROJECT_DIR$/lib/jwt_middleware.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="164" column="11" lean-forward="true" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
+            <state relative-caret-position="195">
+              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/obtain_token.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/user/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="222" column="40" lean-forward="true" selection-start-line="222" selection-start-column="40" selection-end-line="222" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/user/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="52" column="80" lean-forward="true" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
+            <state relative-caret-position="247">
+              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/user/api_v10/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -211,8 +242,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings/urls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+            <state relative-caret-position="315">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -250,8 +281,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/production.bash" />
-        <option value="$PROJECT_DIR$/potty.js" />
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/LICENSE" />
@@ -289,18 +318,20 @@
         <option value="$PROJECT_DIR$/patty.js" />
         <option value="$PROJECT_DIR$/lib/patty.js" />
         <option value="$PROJECT_DIR$/settings/database.js" />
-        <option value="$PROJECT_DIR$/settings/urls.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/settings/_redis.js" />
         <option value="$PROJECT_DIR$/env" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/settings/settings.js" />
-        <option value="$PROJECT_DIR$/lib/jwt_middleware.js" />
-        <option value="$PROJECT_DIR$/lib/obtain_token.js" />
-        <option value="$PROJECT_DIR$/app/user/test.js" />
         <option value="$PROJECT_DIR$/lib/passport.js" />
+        <option value="$PROJECT_DIR$/lib/obtain_token.js" />
+        <option value="$PROJECT_DIR$/lib/jwt_middleware.js" />
+        <option value="$PROJECT_DIR$/app/user/api_v10/routers.js" />
         <option value="$PROJECT_DIR$/app/user/routes.js" />
+        <option value="$PROJECT_DIR$/settings/urls.js" />
+        <option value="$PROJECT_DIR$/app/user/api_v10/routes.js" />
+        <option value="$PROJECT_DIR$/app/user/test.js" />
       </list>
     </option>
   </component>
@@ -352,7 +383,9 @@
             <path>
               <item name="patty" type="b2602c69:ProjectViewProjectNode" />
               <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="api_v10" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="patty" type="b2602c69:ProjectViewProjectNode" />
@@ -458,16 +491,15 @@
       <workItem from="1536058556186" duration="176000" />
       <workItem from="1536058794150" duration="50000" />
       <workItem from="1536059627228" duration="291000" />
-      <workItem from="1538745720953" duration="2593000" />
+      <workItem from="1538745720953" duration="5430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113843000" />
+    <option name="totallyTimeSpent" value="116680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.113336846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -483,7 +515,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.41945946" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4010811" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -556,13 +588,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docker_compose/nginx/sites/node-https.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker_compose/certbot/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -784,13 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jwt_middleware.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/locale_middleware.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -837,31 +855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/obtain_token.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/common/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/user/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="164" column="11" lean-forward="true" selection-start-line="164" selection-start-column="11" selection-end-line="164" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="81" column="15" lean-forward="true" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -872,17 +869,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/settings/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="81" column="15" lean-forward="true" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/settings/urls.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        <state relative-caret-position="315">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/user/api_v10/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/user/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="52" column="80" lean-forward="true" selection-start-line="52" selection-start-column="80" selection-end-line="52" selection-end-column="80" />
+        <state relative-caret-position="247">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jwt_middleware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/obtain_token.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/user/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="222" column="40" lean-forward="true" selection-start-line="222" selection-start-column="40" selection-end-line="222" selection-end-column="40" />
         </state>
       </provider>
     </entry>

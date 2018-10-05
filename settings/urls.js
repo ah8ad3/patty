@@ -3,12 +3,11 @@ const path = require('path');
 const commonRouter = require('../app/common/routes');
 const userRouter = require('../app/user/routes');
 
+const userApiV10 = require('../app/user/api_v10/routes');
+
 const patty = require('../lib/patty');
 
 function urls(app, io, express){
-    app.use('/common', commonRouter);
-    app.use('/', userRouter);
-
     app.use('/fa', function (req, res) {
         res.cookie('locale', 'fa');
         res.redirect('/');
@@ -17,6 +16,12 @@ function urls(app, io, express){
         res.cookie('locale', 'en');
         res.redirect('/');
     });
+
+    app.use('/common', commonRouter);
+    app.use('/', userRouter);
+
+    app.use('/api/v10/user', userApiV10);
+
 
     if (process.env.PD_FLAG === 'dev' || process.env.PD_FLAG === 'test') {
         // should use nginx or apache instead

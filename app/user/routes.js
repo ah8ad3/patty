@@ -7,6 +7,7 @@ const {message} = require('./messages');
 const validator = require('validator');
 const {UserModel} = require('./models');
 
+const patty = require('../../lib/patty');
 
 // show the home page (will also have our login links)
 router.get('/', function(req, res) {
@@ -59,6 +60,9 @@ router.post('/login', function(req, res, next) {
         res.status(400).send({error: message().input_format})
     }
 });
+
+
+router.post('/obtain-jwt', patty.jwt_obtain);
 
 
 router.get('/register', function(req, res) {

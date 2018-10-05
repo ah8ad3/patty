@@ -106,6 +106,18 @@ const user = (chai, server) => {
                     });
             });
         });
+
+        describe('/GET local and google', () => {
+            it('it should GET local page', (done) => {
+                chai.request(server)
+                    .get('/connect/local')
+                    .end((err, res) => {
+                        res.should.have.status(200);
+                        done();
+                    });
+            });
+        });
+
         describe('/POST login', () => {
             it('should logged in', (done)=> {
                 let user = {
@@ -163,6 +175,90 @@ const user = (chai, server) => {
                 })
             });
         });
+
+        describe('JWT', () => {
+            let token;
+            it('should error for wrong email and password', function (done) {
+                let user = {
+                    email: "as@asafdf.com",
+                    password: "sfdv"
+                };
+                chai.request(server)
+                    .post('/obtain-jwt')
+                    .send(user)
+                    .end((err, res) => {
+                        res.should.have.status(400);
+                        done()
+                    })
+            });
+            it('should error for missing email and password', function (done) {
+                chai.request(server)
+                    .post('/obtain-jwt')
+                    .end((err, res) => {
+                        res.should.have.status(400);
+                        done()
+                    })
+            });
+            it('should error for wrong password', function (done) {
+                let user = {
+                    email: "some@example.org",
+                    password: "meCah$%26"
+                };
+                chai.request(server)
+                    .post('/obtain-jwt')
+                    .send(user)
+                    .end((err, res) => {
+                        res.should.have.status(400);
+                        done()
+                    })
+            });
+            it('should get jwt key', function (done) {
+                let user = {
+                    email: "some@example.org",
+                    password: "someCah$%26"
+                };
+                chai.request(server)
+                    .post('/obtain-jwt')
+                    .send(user)
+                    .end((err, res) => {
+                        res.should.have.status(200);
+                        token = res.body.token;
+                        done()
+                    })
+            });
+            it('should check for jwt with 403 status code', function (done) {
+                chai.request(server)
+                    .get('/api/v10/user/jwt-check')
+                    .end((err, res) => {
+                        res.should.have.status(403);
+                        done()
+                    })
+            });
+            it('should check for jwt with 400 status code', function (done) {
+                let _token = {
+                    token: "assf.sdfvsdv"
+                };
+                chai.request(server)
+                    .get('/api/v10/user/jwt-check')
+                    .send(_token)
+                    .end((err, res) => {
+                        res.should.have.status(400);
+                        done()
+                    })
+            });
+            it('should check for jwt with 200 status code', function (done) {
+                let _token = {
+                    token: token
+                };
+                chai.request(server)
+                    .get('/api/v10/user/jwt-check')
+                    .send(_token)
+                    .end((err, res) => {
+                        res.should.have.status(200);
+                        done()
+                    })
+            });
+        });
         //After all tests are finished drop database and close connection
         after(function (done) {
             mongoose.connection.db.dropDatabase(function () {
@@ -203,17 +299,6 @@ const user = (chai, server) => {
                         res.should.have.status(200);
                         // res.body.should.be.a('array');
                         // res.body.length.should.be.eql(0);
-                        done();
-                    });
-            });
-        });
-
-        describe('/GET local and google', () => {
-            it('it should GET local page', (done) => {
-                chai.request(server)
-                    .get('/connect/local')
-                    .end((err, res) => {
-                        res.should.have.status(200);
                         done();
                     });
             });
