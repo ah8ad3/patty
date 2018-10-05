@@ -14,6 +14,7 @@ let secret_key = process.env.SECRET_KEY;
 
 if (process.env.PD_FLAG === 'test') {
     process.env.secret_key = 'thisisantestkey';
+    secret_key = 'thisisantestkey';
     process.env.DB_NAME = 'test_potty';
     process.env.DB_HOST = 'localhost';
     process.env.DB_PORT = '27017';
