@@ -42,17 +42,17 @@ router.post('/login', function(req, res, next) {
     if (validator.isEmail(email) || validator.isEmpty(pass) === false) {
         passport.authenticate('local-login', function (err, user, info) {
             if (err) {
-                res.status(500).send({error: message().server_error})
+                return res.status(500).send({error: message().server_error})
             }
             // Generate a JSON response reflecting authentication status
             if (user === false) {
-                res.status(400).send({error: message().wrong_login});
+                return res.status(400).send({error: message().wrong_login});
             }
             req.login(user, function (err) {
                 if (err) {
-                    return next(err);
+                    return res.status(400).send({error: message().wrong_login});
                 }
-                return res.redirect('/profile');
+                return res.status(200).send({success: message().hi});
             });
         })(req, res, next);
     }else {
