@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7c0718c-492c-4832-9400-5faa87d0e0c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/user/api_v10/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/user/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/user/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jwt_middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jwt_middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/obtain_token.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/obtain_token.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/settings/urls.js" afterDir="false" />
-    </list>
+    <list default="true" id="a7c0718c-492c-4832-9400-5faa87d0e0c6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -197,26 +189,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/jwt_middleware.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/obtain_token.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+            <state relative-caret-position="180">
+              <caret line="12" column="48" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/obtain_token.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="44" column="69" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/user/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="222" column="40" lean-forward="true" selection-start-line="222" selection-start-column="40" selection-end-line="222" selection-end-column="40" />
+            <state relative-caret-position="195">
+              <caret line="234" column="22" lean-forward="true" selection-start-line="234" selection-start-column="22" selection-end-line="234" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -390,6 +382,11 @@
             <path>
               <item name="patty" type="b2602c69:ProjectViewProjectNode" />
               <item name="patty" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="patty" type="462c0819:PsiDirectoryNode" />
               <item name="settings" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -491,17 +488,18 @@
       <workItem from="1536058556186" duration="176000" />
       <workItem from="1536058794150" duration="50000" />
       <workItem from="1536059627228" duration="291000" />
-      <workItem from="1538745720953" duration="5430000" />
+      <workItem from="1538745720953" duration="5928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116680000" />
+    <option name="totallyTimeSpent" value="117178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.113336846" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.113336846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -515,7 +513,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4010811" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4010811" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -897,24 +895,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jwt_middleware.js">
+    <entry file="file://$PROJECT_DIR$/app/user/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <caret line="234" column="22" lean-forward="true" selection-start-line="234" selection-start-column="22" selection-end-line="234" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/jwt_middleware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/obtain_token.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/user/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="222" column="40" lean-forward="true" selection-start-line="222" selection-start-column="40" selection-end-line="222" selection-end-column="40" />
+        <state relative-caret-position="465">
+          <caret line="44" column="69" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
         </state>
       </provider>
     </entry>
