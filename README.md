@@ -28,6 +28,7 @@ with this command `nyc npm test`
 - cors header support for all or some routes or custom origin
 - using private and public media files
 - using cache for routes with redis
+- add some test for stability of project
 
 
 # Todo:
