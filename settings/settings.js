@@ -6,6 +6,7 @@ const session = require('express-session');
 const compression = require('compression');
 const Raven = require('raven');
 const cors = require('cors');
+const engines = require('consolidate');
 
 const flash = require('connect-flash');
 const {internal} = require('./messages');
@@ -91,7 +92,8 @@ let test = (app) => {
 function settings(app, express){
     // view engine setup
     app.set('views', path.join(__dirname, '../assets/templates'));
-    app.set('view engine', 'pug');
+    app.engine('html', engines.mustache);
+    app.set('view engine', 'html');
 
     // dev flag set on settings
     if (process.env.PD_FLAG === 'dev'){

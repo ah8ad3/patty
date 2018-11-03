@@ -8,7 +8,7 @@ const {p_storage} = require('../../settings/settings');
 
 
 router.get('/', function(req, res) {
-    res.render('index', { title: 'Express' });
+    res.render('index.html', { title: 'Express' });
 });
 
 router.get('/download/:file_name', function (req, res) {

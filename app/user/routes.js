@@ -22,7 +22,7 @@ router.get('/users', setting.cache.route(5000), function (req, res) {
 });
 
 router.get('/profile', isLoggedIn, function(req, res) {
-    res.render('profile.pug', {
+    res.render('profile.html', {
         user : req.user
     });
 });
@@ -34,7 +34,7 @@ router.get('/logout', function(req, res) {
 
 // local section -----------
 router.get('/login', function(req, res) {
-    res.render('login.pug');
+    res.render('login.html');
 });
 
 router.post('/login', function(req, res, next) {
@@ -66,7 +66,7 @@ router.post('/obtain-jwt', patty.jwt_obtain);
 
 
 router.get('/register', function(req, res) {
-    res.render('register.pug', { message: req.flash('SignUpMessage') });
+    res.render('register.html', { message: req.flash('SignUpMessage') });
 });
 
 
@@ -101,7 +101,7 @@ router.get('/auth/google/callback',
 
 // locally --------------------------------
 router.get('/connect/local', function(req, res) {
-    res.render('connect-local.pug', { message: req.flash('loginMessage') });
+    res.render('connect-local.html', { message: req.flash('loginMessage') });
 });
 
 router.post('/connect/local', passport.authenticate('local-signup', {
