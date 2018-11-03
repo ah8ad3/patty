@@ -32,6 +32,7 @@ with this command `nyc npm test`
 
 
 # Todo:
+- add mustache template engine as default template engine, support html
 - planning to add free and secure ssl (maybe in external project or here)
 - add queue (there is many queue library like kue, queue,... you can use by yore need)
 - permission system (i done this before but i think not need for this repo and i decide to make this repo easy for all)
