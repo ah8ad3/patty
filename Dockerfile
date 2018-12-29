@@ -1,11 +1,20 @@
-FROM node:10.8-alpine
+FROM node:10
 
+# Create app directory
 WORKDIR /usr/src/app
 
-COPY . .
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available ([email protected]+)
+COPY package*.json ./
 
 RUN npm install
+# If you are building your code for production
+# RUN npm install --only=production
 
-CMD [ "node", "patty.js", "-d" ]
+# Bundle app source
+COPY . .
 
-# fast development use docker, production mode with docker-compose added in `docker-compose` directory
+EXPOSE 5000
+CMD [ "npm", "start" ]
+

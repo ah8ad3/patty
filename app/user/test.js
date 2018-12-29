@@ -10,7 +10,8 @@ const user = (chai, server) => {
             mongoose.connect(`mongodb://localhost/${process.env.DB_NAME}`);
             const db = mongoose.connection;
             db.on('error', console.error.bind(console, 'connection error'));
-            db.once('open', function () {
+            db.once('open', async function () {
+                await UserModel.find({}).remove({});
                 console.log('We are connected to test database!');
                 done();
             });
@@ -112,7 +113,7 @@ const user = (chai, server) => {
                 chai.request(server)
                     .get('/connect/local')
                     .end((err, res) => {
-                        res.should.have.status(200);
+                        res.should.have.status(404);
                         done();
                     });
             });

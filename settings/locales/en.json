@@ -15,5 +15,6 @@
 	"DB_NAME value in .env file is empty": "DB_NAME value in .env file is empty",
 	"Not Found": "Not Found",
 	"Input is not in right format": "Input is not in right format",
-	"Unauthorized request": "Unauthorized request"
+	"Unauthorized request": "Unauthorized request",
+	"Please logout first then try to register": "Please logout first then try to register"
 }

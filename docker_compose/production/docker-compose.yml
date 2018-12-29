@@ -1,0 +1,49 @@
+version: '3'
+services:
+  redis:
+    image: redis
+    restart: on-failure
+
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - ./mongoData:/data/db
+
+  node:
+    build:
+      dockerfile: Dockerfile
+      context: ../../
+    ports:
+      - "5000"
+    restart: always
+    volumes:
+      - ../../:/usr/app
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      - REDIS_SES_HOST=redis
+      - REDIS_SES_PORT=6379
+      - REDIS_CACHE_HOST=redis
+      - REDIS_CACHE_PORT=6379
+      - DB_HOST=mongo
+      - DB_NAME=kara
+      - DB_PORT=27017
+      - SECRET_KEY=lkcQD#@R$RTrevs30
+      - PD_FLAG=dev
+      - OA_CLIENT_ID=1
+      - OA_CLIENT_SECRET=1
+      - OA_CALLBACK=1
+      - RAVEN_NAME=1361772
+      - RAVEN_KEY=d6a3553745d144638a5c2f97da69c824
+
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - node
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf

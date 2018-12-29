@@ -3,7 +3,7 @@ version: '3.3'
 services:
   node:
     build:
-      context: ./node
+      context: node
       args:
       - NODE_VERSION=latest
       - PROJECT_PATH=/opt/app/
@@ -15,7 +15,7 @@ services:
     tty: true
 
   mongo:
-    build: ./mongo
+    build: mongo
     expose:
     - "27017"
     volumes:
@@ -23,7 +23,7 @@ services:
 
   nginx:
     build:
-      context: ./nginx
+      context: nginx
       args:
       - WEB_REVERSE_PROXY_PORT=5000
       - WEB_SSL=false
@@ -39,7 +39,7 @@ services:
 
   certbot:
     build:
-      context: ./certbot
+      context: certbot
     links:
     - apache
     - nginx
@@ -49,7 +49,7 @@ services:
 
   redis:
     build:
-      context: ./redis
+      context: redis
     expose:
     - "6379"
     volumes:

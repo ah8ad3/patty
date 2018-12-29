@@ -8,7 +8,8 @@ const m = () => {
         email_taken: i18n.__('This email already token'),
         register_suc: i18n.__('Register successfully'),
         input_format: i18n.__('Input is not in right format'),
-        unauthorized: i18n.__('Unauthorized request')
+        unauthorized: i18n.__('Unauthorized request'),
+        logout_first: i18n.__('Please logout first then try to register')
     }
 };
 

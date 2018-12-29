@@ -12,7 +12,7 @@ const patty = require('../../lib/patty');
 // show the home page (will also have our login links)
 router.get('/', function(req, res) {
     // res.render('index.pug');
-    res.send(message().hi);
+    res.status(200).render('index.html');
 });
 
 router.get('/users', setting.cache.route(5000), function (req, res) {
@@ -69,77 +69,45 @@ router.get('/register', function(req, res) {
     res.render('register.html', { message: req.flash('SignUpMessage') });
 });
 
+router.post('/register', (req, res) => {
+    let body = {
+        password: req.body.password,
+        email: req.body.email,
+    };
+    if (validator.isEmail(body.email) && !validator.isEmpty(body.password)) {
+        if (!req.user) {
+            UserModel.findOne({ 'local.email' :  body.email}, function(err, user) {
+                // if there are any errors, return the error
+                if (err)
+                    return res.status(500).send(message().server_error);
 
-router.post('/register', function(req, res, next) {
-    let email = req.body.email;
-    let pass = req.body.password;
-    if (validator.isEmail(email) || validator.isEmpty(pass) === false) {
-        passport.authenticate('local-signup', function(err, user, info) {
-            if (err) {
-                res.status(500).send({error: message().server_error})
-            }
-            else if (user === false) {
-                res.status(400).send({error: message().email_taken});
-            }else {
-                res.status(201).send(message().register_suc);
-            }
-        })(req, res, next);
+                // check to see if theres already a user with that username
+                if (user) {
+                    return res.status(400).send(message().email_taken);
+                } else {
+
+                    // create the user
+                    const newUser = new UserModel();
+                    newUser.local.email = body.email;
+                    newUser.local.password = newUser.generateHash(body.password);
+
+                    newUser.save(function(err) {
+                        if (err)
+                            return res.status(500).send(message().server_error);
+
+                        return res.status(201).send(message().register_suc);
+                    });
+                }
+
+            });
+        }else {
+            return res.status(400).send(message().logout_first);
+        }
     }else {
-        res.status(400).send({error: message().input_format})
+        return res.status(400).send(message().input_format);
     }
 });
 
-// google ---------------------------------
-router.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
-
-// the callback after google has authenticated the user
-router.get('/auth/google/callback',
-    passport.authenticate('google', {
-        successRedirect : '/profile',
-        failureRedirect : '/'
-    }));
-
-// locally --------------------------------
-router.get('/connect/local', function(req, res) {
-    res.render('connect-local.html', { message: req.flash('loginMessage') });
-});
-
-router.post('/connect/local', passport.authenticate('local-signup', {
-    successRedirect : '/profile', // redirect to the secure profile section
-    failureRedirect : '/connect/local', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
-}));
-
-// google ---------------------------------
-
-// send to google to do the authentication
-router.get('/connect/google', passport.authorize('google', { scope : ['profile', 'email'] }));
-
-// the callback after google has authorized the user
-router.get('/connect/google/callback',
-    passport.authorize('google', {
-        successRedirect : '/profile',
-        failureRedirect : '/'
-    }));
-
-// local -----------------------------------
-router.get('/unlink/local', isLoggedIn, function(req, res) {
-    const user            = req.user;
-    user.local.email    = undefined;
-    user.local.password = undefined;
-    user.save(function() {
-        res.redirect('/profile');
-    });
-});
-
-// google ---------------------------------
-router.get('/unlink/google', isLoggedIn, function(req, res) {
-    const user          = req.user;
-    user.google.token = undefined;
-    user.save(function() {
-        res.redirect('/profile');
-    });
-});
 
 
 // route middleware to ensure user is logged in

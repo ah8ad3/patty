@@ -30,6 +30,7 @@ with this command `nyc npm test`
 - using cache for routes with redis
 - add some test for stability of project
 - mustache template engine
+- docker compose for production and debugging mode
 
 # Todo:
 - planning to add free and secure ssl (maybe in external project or here)
@@ -44,9 +45,11 @@ with this command `nyc npm test`
 # usage:
 clone project copy env file to .env file and put values
 don't forget to put secret key
+
+you can run by two ways
  
-run `npm install`
-then run `npm start` and server run in `http://localhost:5000`
+- 1 . run `npm install` then run `npm start` and server run in `http://localhost:5000`
+- 2 . just install `docker-compose` and run `./entrypoint.sh`
 
 this project run with node version 10.8.0
 and npm version 6.3.0 without any problem
