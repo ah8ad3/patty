@@ -7,7 +7,7 @@ const patty = require('../lib/patty');
 let test_value = "hi";
 let error = () => {
     patty.log.danger(internal.redis_error);
-    process.exit();
+    process.exit(1);
 };
 
 client.on('error', function(){

@@ -6,11 +6,14 @@ const {internal} = require('./messages');
 
 const options = {useNewUrlParser: true };
 mongoose.connect(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
+
     options).then(() => {
     patty.log.info(internal.database_connected);
-}).catch(() => {
+}
+).catch(() => {
+
     patty.log.danger(internal.database_error);
-    process.exit()
+    process.exit(1)
 });
 
 

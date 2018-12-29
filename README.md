@@ -31,6 +31,7 @@ with this command `nyc npm test`
 - add some test for stability of project
 - mustache template engine
 - docker compose for production and debugging mode
+- simple deploy flow in progress
 
 # Todo:
 - planning to add free and secure ssl (maybe in external project or here)

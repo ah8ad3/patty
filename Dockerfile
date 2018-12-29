@@ -16,5 +16,8 @@ RUN npm install
 COPY . .
 
 EXPOSE 5000
-CMD [ "npm", "start" ]
+
+ENTRYPOINT ["./docker-run.sh"]
+
+#CMD [ "npm", "test" ]
 
