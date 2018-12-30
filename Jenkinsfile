@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('pull') {
       steps {
-        sh 'sh entrypoint.sh'
+        git(url: 'https://github.com/ah8ad3/patty', branch: 'master')
+      }
+    }
+    stage('docker test') {
+      steps {
+        sh 'docker version'
       }
     }
   }
