@@ -13,11 +13,17 @@ pipeline {
             sh 'docker version'
           }
         }
-        stage('apt test') {
+        stage('install compose') {
           steps {
-            sh 'docker-compose version'
+            sh '''curl -L --fail https://github.com/docker/compose/releases/download/1.23.1/run.sh -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose'''
           }
         }
+      }
+    }
+    stage('compose test') {
+      steps {
+        sh 'docker-compose version'
       }
     }
   }
