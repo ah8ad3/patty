@@ -7,8 +7,17 @@ pipeline {
       }
     }
     stage('docker test') {
-      steps {
-        sh 'docker version'
+      parallel {
+        stage('docker test') {
+          steps {
+            sh 'docker version'
+          }
+        }
+        stage('apt test') {
+          steps {
+            sh 'sudo apt install docker'
+          }
+        }
       }
     }
   }
