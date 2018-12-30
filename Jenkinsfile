@@ -26,4 +26,7 @@ pipeline {
       }
     }
   }
+  environment {
+    PATH = '"/home/ahmad/miniconda3/bin:$PATH"'
+  }
 }
