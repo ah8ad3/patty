@@ -15,22 +15,29 @@ services:
       dockerfile: Dockerfile
       context: ../../
     ports:
-    - "5000:5000"
+      - "5000:5000"
     volumes:
-    - ../../:/usr/app
+      - ../../:/usr/app
     depends_on:
-    - redis
-    - mongo
+      - redis
+      - mongo
     environment:
-    - REDIS_SES_HOST=redis
-    - REDIS_SES_PORT=6379
-    - REDIS_CACHE_HOST=redis
-    - REDIS_CACHE_PORT=6379
-    - DB_HOST=mongo
-    - DB_NAME=kara
-    - DB_PORT=27017
-    - SECRET_KEY=lkcQD#@R$RTrevs30
-    - PD_FLAG=dev
-    - OA_CLIENT_ID=1
-    - OA_CLIENT_SECRET=1
-    - OA_CALLBACK=1
+      - REDIS_SES_HOST=redis
+      - REDIS_SES_PORT=6379
+      - REDIS_CACHE_HOST=redis
+      - REDIS_CACHE_PORT=6379
+      - DB_HOST=mongo
+      - DB_NAME=kara
+      - DB_PORT=27017
+      - SECRET_KEY=lkcQD#@R$RTrevs30
+      - PD_FLAG=dev
+      - OA_CLIENT_ID=1
+      - OA_CLIENT_SECRET=1
+      - OA_CALLBACK=1
+      - DOCKER_TEST=1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+#      test: curl -f http://localhost:5000 || exit 1
+#      interval: 1m30s
+#      timeout: 10s
+#      retries: 3

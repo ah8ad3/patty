@@ -43,3 +43,7 @@ RAVEN_KEY=
 
 // socket io usability            default = 0 non use         = 1  use docket io on same port
 SOCKET_USE=0
+
+
+
+DOCKER_TEST=0
