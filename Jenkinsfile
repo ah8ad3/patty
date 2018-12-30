@@ -15,7 +15,7 @@ pipeline {
         }
         stage('apt test') {
           steps {
-            sh 'sudo apt install docker'
+            sh 'docker-compose version'
           }
         }
       }
