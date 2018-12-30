@@ -7,17 +7,8 @@ pipeline {
       }
     }
     stage('docker test') {
-      parallel {
-        stage('docker test') {
-          steps {
-            sh 'docker version'
-          }
-        }
-        stage('install compose') {
-          steps {
-            sh 'pip install docker-compose'
-          }
-        }
+      steps {
+        sh 'docker version'
       }
     }
     stage('compose test') {
@@ -27,6 +18,6 @@ pipeline {
     }
   }
   environment {
-    PATH = '"/home/ahmad/miniconda3/bin:$PATH"'
+    compose = '/home/ahmad/miniconda3/bin/docker-compose'
   }
 }
