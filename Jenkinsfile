@@ -18,6 +18,6 @@ pipeline {
     }
   }
   environment {
-    PATH = '"/var/lib/jenkins:$PATH"'
+    PATH = '/var/lib/jenkins:$PATH'
   }
 }
