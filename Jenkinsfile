@@ -17,7 +17,4 @@ pipeline {
       }
     }
   }
-  environment {
-    compose = '/home/ahmad/miniconda3/bin/docker-compose'
-  }
 }
