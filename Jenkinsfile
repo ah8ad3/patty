@@ -1,5 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    docker {
+      image 'tmaier/docker-compose'
+    }
+
+  }
   stages {
     stage('pull') {
       steps {
