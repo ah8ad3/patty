@@ -14,7 +14,7 @@ const {internal} = require('./messages');
 let secret_key = process.env.SECRET_KEY;
 
 if (process.env.PD_FLAG === 'test') {
-    if (process.env.DOCKER_TEST === 0) {
+    if (!process.env.DOCKER_TEST) {
         process.env.SECRET_KEY = 'thisisantestkey';
         secret_key = 'thisisantestkey';
         process.env.DB_NAME = 'test_potty';
