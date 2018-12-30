@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('pull') {
       steps {
@@ -16,8 +16,5 @@ pipeline {
         sh 'docker-compose version'
       }
     }
-  }
-  environment {
-    PATH = '/var/lib/jenkins:$PATH'
   }
 }
