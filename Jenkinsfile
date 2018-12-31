@@ -21,12 +21,12 @@ pipeline {
         }
         stage('start mongo') {
           steps {
-            sh 'docker run --name mongo_1 -p 27017:27017 -d mongo'
+            sh 'docker run -p 27017:27017 -d mongo'
           }
         }
         stage('start redis') {
           steps {
-            sh 'docker run --name redis_1 -p 6379:6379   -d redis'
+            sh 'docker run -p 6379:6379   -d redis'
           }
         }
       }
