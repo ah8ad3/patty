@@ -17,7 +17,4 @@ COPY . .
 
 EXPOSE 5000
 
-ENTRYPOINT ["./scripts/docker-run.sh"]
-
-#CMD [ "npm", "test" ]
-
+CMD [ "npm", "test" ]
