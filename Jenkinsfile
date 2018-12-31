@@ -19,6 +19,16 @@ pipeline {
             sh 'docker-compose version'
           }
         }
+        stage('start mongo') {
+          steps {
+            sh 'docker run --name mongo_1 -p 27017:27017 -d mongo'
+          }
+        }
+        stage('start redis') {
+          steps {
+            sh 'docker run --name redis_1 -p 6379:6379   -d redis'
+          }
+        }
       }
     }
     stage('install dependency') {
@@ -31,6 +41,20 @@ pipeline {
         stage('test app') {
           steps {
             sh 'npm test'
+          }
+        }
+      }
+    }
+    stage('stop mongo') {
+      parallel {
+        stage('stop mongo') {
+          steps {
+            sh 'docker stop mongo_1'
+          }
+        }
+        stage('stop redis') {
+          steps {
+            sh 'docker stop redis_1'
           }
         }
       }
