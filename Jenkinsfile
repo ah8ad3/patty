@@ -24,11 +24,19 @@ pipeline {
     stage('test application') {
       steps {
         sh './scripts/docker-test.sh'
+        sleep 5
       }
     }
-    stage('done') {
+    stage('') {
       steps {
-        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true, disableDeferredWipeout: true)
+        sleep 10
+        sh '''test=$(docker inspect test_node_1 --format=\'{{.State.ExitCode}}\')
+if [ $test -eq 0 ]
+then
+exit 0 
+else
+exit 1
+fi'''
       }
     }
   }
