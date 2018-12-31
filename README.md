@@ -32,6 +32,7 @@ with this command `nyc npm test`
 - mustache template engine
 - docker compose for production and debugging mode
 - simple deploy flow in progress
+- jenkins simple pipeline added
 
 # Todo:
 - planning to add free and secure ssl (maybe in external project or here)
@@ -50,7 +51,7 @@ don't forget to put secret key
 you can run by two ways
  
 - 1 . run `npm install` then run `npm start` and server run in `http://localhost:5000`
-- 2 . just install `docker-compose` and run `./entrypoint.sh`
+- 2 . just install `docker-compose` and run `./scripts/entrypoint.sh`
 
 this project run with node version 10.8.0
 and npm version 6.3.0 without any problem
