@@ -21,14 +21,37 @@ pipeline {
         }
       }
     }
-    stage('test application') {
-      steps {
-        sh './scripts/docker-test.sh'
+    stage('run redis') {
+      parallel {
+        stage('run redis') {
+          steps {
+            sh 'docker run -it -p 6379:6379 redis'
+          }
+        }
+        stage('run mongo') {
+          steps {
+            sh 'docker run -it -p 27017:27017 mongo'
+          }
+        }
+      }
+    }
+    stage('install dependency') {
+      parallel {
+        stage('install dependency') {
+          steps {
+            sh 'npm install'
+          }
+        }
+        stage('test app') {
+          steps {
+            sh 'npm test'
+          }
+        }
       }
     }
     stage('done') {
       steps {
-        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true, disableDeferredWipeout: true)
+        echo 'done'
       }
     }
   }
