@@ -21,9 +21,23 @@ pipeline {
         }
       }
     }
-    stage('run application') {
+    stage('test application') {
+      parallel {
+        stage('test application') {
+          steps {
+            sh './scripts/docker-test.sh'
+          }
+        }
+        stage('') {
+          steps {
+            sh 'curl -f localhost:5000 || exit 1'
+          }
+        }
+      }
+    }
+    stage('') {
       steps {
-        sh 'sh entrypoint.sh'
+        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true, disableDeferredWipeout: true)
       }
     }
   }
