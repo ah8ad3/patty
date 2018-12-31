@@ -21,22 +21,37 @@ pipeline {
         }
       }
     }
-    stage('test application') {
-      steps {
-        sh './scripts/docker-test.sh'
-        sleep 5
+    stage('run redis') {
+      parallel {
+        stage('run redis') {
+          steps {
+            sh 'docker run -it -p 6379:6379 redis'
+          }
+        }
+        stage('run mongo') {
+          steps {
+            sh 'docker run -it -p 27017:27017 mongo'
+          }
+        }
       }
     }
-    stage('') {
+    stage('install dependency') {
+      parallel {
+        stage('install dependency') {
+          steps {
+            sh 'npm install'
+          }
+        }
+        stage('test app') {
+          steps {
+            sh 'npm test'
+          }
+        }
+      }
+    }
+    stage('done') {
       steps {
-        sleep 10
-        sh '''test=$(docker inspect test_node_1 --format=\'{{.State.ExitCode}}\')
-if [ $test -eq 0 ]
-then
-exit 0 
-else
-exit 1
-fi'''
+        echo 'done'
       }
     }
   }
