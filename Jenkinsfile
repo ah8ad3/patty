@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'tmaier/docker-compose'
+      image 'ah8ad3/os:0.1'
     }
 
   }
