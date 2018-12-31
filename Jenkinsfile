@@ -25,12 +25,12 @@ pipeline {
       parallel {
         stage('run redis') {
           steps {
-            sh 'docker run -it -p 6379:6379 redis'
+            sh 'docker run -t -p 6379:6379 redis'
           }
         }
         stage('run mongo') {
           steps {
-            sh 'docker run -it -p 27017:27017 mongo'
+            sh 'docker run -t -p 27017:27017 mongo'
           }
         }
       }
