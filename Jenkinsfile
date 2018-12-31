@@ -8,13 +8,22 @@ pipeline {
   }
   stages {
     stage('docker test') {
-      steps {
-        sh 'docker version'
+      parallel {
+        stage('docker test') {
+          steps {
+            sh 'docker version'
+          }
+        }
+        stage('docker-compose test') {
+          steps {
+            sh 'docker-compose version'
+          }
+        }
       }
     }
-    stage('compose test') {
+    stage('run application') {
       steps {
-        sh 'docker-compose version'
+        sh 'sh entrypoint.sh'
       }
     }
   }
