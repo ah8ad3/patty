@@ -2,6 +2,7 @@ pipeline {
   agent {
     docker {
       image 'ah8ad3/os:0.1'
+      args '-v /var/run/docker.sock:/var/run/docker.sock'
     }
 
   }
