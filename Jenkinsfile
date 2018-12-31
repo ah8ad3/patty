@@ -22,20 +22,11 @@ pipeline {
       }
     }
     stage('test application') {
-      parallel {
-        stage('test application') {
-          steps {
-            sh './scripts/docker-test.sh'
-          }
-        }
-        stage('') {
-          steps {
-            sh 'curl -f localhost:5000 || exit 1'
-          }
-        }
+      steps {
+        sh './scripts/docker-test.sh'
       }
     }
-    stage('') {
+    stage('done') {
       steps {
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true, disableDeferredWipeout: true)
       }
