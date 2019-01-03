@@ -29,6 +29,11 @@ pipeline {
             sh 'docker run -p 6379:6379   -d redis'
           }
         }
+        stage('change permission for npm') {
+          steps {
+            sh 'chown -R $(whoami) /usr/local/'
+          }
+        }
       }
     }
     stage('install dependency') {
