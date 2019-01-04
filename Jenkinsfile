@@ -23,7 +23,9 @@ pipeline {
     }
     stage('run tests') {
       steps {
-        sh 'sh scripts/check-test-docker.sh'
+        sh '''
+chmod +x scripts/check-test-docker.sh
+ sh scripts/check-test-docker.sh'''
       }
     }
     stage('deploy') {
