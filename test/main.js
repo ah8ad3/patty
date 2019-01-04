@@ -13,6 +13,11 @@ chai.use(chaiHttp);
 *  Just import apps test here like above
 * */
 
+if (process.env.DOCKER_TEST){
+    port  = process.env.PORT | '5000';
+    // app = `http://localhost:${port}`
+}
+
 
 // test for user app
 require('../app/user/test')(chai, app);

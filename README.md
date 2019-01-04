@@ -31,10 +31,10 @@ with this command `nyc npm test`
 - add some test for stability of project
 - mustache template engine
 - docker compose for production and debugging mode
-- simple deploy flow in progress
-- jenkins simple pipeline added
+- jenkins test flow with docker-compose added and tested, just need to publish os image to hub
 
 # Todo:
+- simple deploy flow in progress
 - planning to add free and secure ssl (maybe in external project or here)
 - add queue (there is many queue library like kue, queue,... you can use by yore need)
 - permission system (i done this before but i think not need for this repo and i decide to make this repo easy for all)

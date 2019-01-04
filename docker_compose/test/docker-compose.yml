@@ -6,8 +6,8 @@ services:
 
   mongo:
     restart: always
-    volumes:
-    - ./mongoData:/data/db
+#    volumes:
+#    - ./mongoData:/data/db
     image: mongo
 
   node:
