@@ -19,49 +19,16 @@ pipeline {
             sh 'docker-compose version'
           }
         }
-        stage('start mongo') {
-          steps {
-            sh 'docker run -p 27017:27017 -d mongo'
-          }
-        }
-        stage('start redis') {
-          steps {
-            sh 'docker run -p 6379:6379   -d redis'
-          }
-        }
-        stage('change permission for npm') {
-          steps {
-            sh 'chown -R $(whoami) /usr/local/'
-          }
-        }
       }
     }
-    stage('install dependency') {
-      parallel {
-        stage('install dependency') {
-          steps {
-            sh 'npm install'
-          }
-        }
-        stage('test app') {
-          steps {
-            sh 'npm test'
-          }
-        }
+    stage('run tests') {
+      steps {
+        sh 'sh scripts/check-test-docker.sh'
       }
     }
-    stage('stop mongo') {
-      parallel {
-        stage('stop mongo') {
-          steps {
-            sh 'docker stop mongo_1'
-          }
-        }
-        stage('stop redis') {
-          steps {
-            sh 'docker stop redis_1'
-          }
-        }
+    stage('deploy') {
+      steps {
+        echo 'in progress'
       }
     }
     stage('done') {
