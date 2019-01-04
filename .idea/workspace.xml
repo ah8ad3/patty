@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7c0718c-492c-4832-9400-5faa87d0e0c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docker_compose/test/check-test-docker.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker_compose/test/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker_compose/test/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -140,7 +137,7 @@
     <session id="-840059344">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.3" value="1" />
@@ -185,7 +182,7 @@
           <entry key="html" value="91" />
           <entry key="js" value="2309" />
           <entry key="json" value="9" />
-          <entry key="md" value="505" />
+          <entry key="md" value="599" />
           <entry key="sh" value="170" />
           <entry key="yml" value="154" />
         </counts>
@@ -198,7 +195,7 @@
           <entry key="HTML" value="91" />
           <entry key="JSON" value="9" />
           <entry key="JavaScript" value="2309" />
-          <entry key="Markdown" value="505" />
+          <entry key="Markdown" value="599" />
           <entry key="PLAIN_TEXT" value="148" />
           <entry key="YAML" value="154" />
         </counts>
@@ -207,23 +204,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="510">
-                <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+              <first_editor relative-caret-position="120">
+                <caret line="33" column="94" selection-start-line="33" selection-start-column="94" selection-end-line="33" selection-end-column="94" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/user/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="79" column="50" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="50" />
+            <state relative-caret-position="405">
+              <caret line="78" column="40" lean-forward="true" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -371,12 +368,12 @@
         <option value="$PROJECT_DIR$/Dockerfile_test" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/scripts/docker-test.sh" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test/main.js" />
         <option value="$PROJECT_DIR$/docker_compose/test/docker-compose.yml" />
         <option value="$PROJECT_DIR$/docker_compose/test/check-test-docker.sh" />
         <option value="$PROJECT_DIR$/scripts/check-test-docker.sh" />
         <option value="$PROJECT_DIR$/app/user/test.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -419,56 +416,7 @@
             <path>
               <item name="patty" type="b2602c69:ProjectViewProjectNode" />
               <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="docker_compose" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="docker_compose" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="docker_compose" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="docker_compose" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -587,12 +535,12 @@
       <workItem from="1546177257672" duration="6750000" />
       <workItem from="1546242978834" duration="2430000" />
       <workItem from="1546507656215" duration="3093000" />
-      <workItem from="1546589172395" duration="1085000" />
+      <workItem from="1546589172395" duration="1803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139321000" />
+    <option name="totallyTimeSpent" value="140039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -941,21 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="510">
-            <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker_compose/production/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1014,8 +947,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/user/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="79" column="50" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="50" />
+        <state relative-caret-position="405">
+          <caret line="78" column="40" lean-forward="true" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="33" column="94" selection-start-line="33" selection-start-column="94" selection-end-line="33" selection-end-column="94" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
