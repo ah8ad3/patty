@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7c0718c-492c-4832-9400-5faa87d0e0c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docker_compose/dev/mongo/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker_compose/dev/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker_compose/dev/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="a7c0718c-492c-4832-9400-5faa87d0e0c6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -139,7 +135,7 @@
     <session id="-840059344">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
@@ -157,7 +153,7 @@
           <entry key="env" value="6" />
           <entry key="html" value="6" />
           <entry key="js" value="43" />
-          <entry key="md" value="6" />
+          <entry key="md" value="7" />
           <entry key="pug" value="1" />
           <entry key="sh" value="10" />
           <entry key="test" value="1" />
@@ -173,7 +169,7 @@
           <entry key="HTML" value="6" />
           <entry key="Jade" value="1" />
           <entry key="JavaScript" value="44" />
-          <entry key="Markdown" value="6" />
+          <entry key="Markdown" value="7" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="YAML" value="9" />
         </counts>
@@ -186,20 +182,20 @@
           <entry key="html" value="91" />
           <entry key="js" value="2309" />
           <entry key="json" value="9" />
-          <entry key="md" value="717" />
+          <entry key="md" value="943" />
           <entry key="sh" value="170" />
           <entry key="yml" value="214" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="161" />
+          <entry key="Bash" value="165" />
           <entry key="CSS" value="1" />
           <entry key="Dockerfile" value="136" />
           <entry key="HTML" value="91" />
           <entry key="JSON" value="9" />
           <entry key="JavaScript" value="2309" />
-          <entry key="Markdown" value="717" />
+          <entry key="Markdown" value="939" />
           <entry key="PLAIN_TEXT" value="148" />
           <entry key="YAML" value="214" />
         </counts>
@@ -217,11 +213,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker_compose/dev/mongo/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker_compose/dev/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="255">
+                <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -252,7 +260,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docker_compose/nginx/scripts/build-nginx.sh" />
         <option value="$PROJECT_DIR$/docker_compose/certbot/scripts/run-certbot.sh" />
         <option value="$PROJECT_DIR$/docker_compose/docker-compose.yml" />
         <option value="$PROJECT_DIR$/docker_compose/README.md" />
@@ -303,6 +310,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/docker_compose/dev/docker-compose.yml" />
         <option value="$PROJECT_DIR$/docker_compose/dev/mongo/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker_compose/dev/README.md" />
       </list>
     </option>
   </component>
@@ -346,12 +354,6 @@
               <item name="patty" type="b2602c69:ProjectViewProjectNode" />
               <item name="patty" type="462c0819:PsiDirectoryNode" />
               <item name="docker_compose" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="patty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="patty" type="462c0819:PsiDirectoryNode" />
-              <item name="docker_compose" type="462c0819:PsiDirectoryNode" />
-              <item name="dev" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="patty" type="b2602c69:ProjectViewProjectNode" />
@@ -482,16 +484,15 @@
       <workItem from="1548431589504" duration="640000" />
       <workItem from="1548584429084" duration="628000" />
       <workItem from="1548614779349" duration="703000" />
-      <workItem from="1549389392614" duration="2259000" />
+      <workItem from="1549389392614" duration="2578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144551000" />
+    <option name="totallyTimeSpent" value="144870000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.113336846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -580,13 +581,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/common/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/passport/lib/http/request.js" />
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -911,7 +905,17 @@
     <entry file="file://$PROJECT_DIR$/docker_compose/dev/mongo/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker_compose/dev/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
+            <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

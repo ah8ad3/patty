@@ -1,4 +1,4 @@
-FROM mongo
+FROM mongo:latest
 
 RUN chown mongodb:mongodb /data/db
 
