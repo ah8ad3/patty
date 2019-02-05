@@ -6,9 +6,9 @@ services:
 
   mongo:
     restart: always
-    volumes:
-      - ./mongoData:/data/db
-    image: mongo
+    build:
+      dockerfile: Dockerfile
+      context: ./mongo
 
   node:
     build:
