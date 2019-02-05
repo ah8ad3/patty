@@ -1,11 +1,11 @@
-FROM mongo:latest
+FROM mongo:4
 
 RUN chown mongodb:mongodb /data/db
 
 
 USER mongodb
 
-VOLUME  mongodbdata /data/db
+VOLUME  mongoData /data/db
 
 CMD ["mongod"]
 

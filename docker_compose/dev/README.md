@@ -3,7 +3,7 @@
 
 run ir once at start
 ```bash
-docker volume create mongodbdata
+docker volume create mongoData
 
 ```
 
