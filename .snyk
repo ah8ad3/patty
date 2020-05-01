@@ -1,0 +1,28 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - express-redis-cache > async > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - mocha > yargs-unparser > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - istanbul > handlebars > async > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - nyc > istanbul-reports > handlebars > async > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - pug > pug-code-gen > constantinople > babel-types > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - pug > pug-filters > constantinople > babel-types > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-01T08:05:22.737Z'
