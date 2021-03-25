@@ -34,7 +34,7 @@
     "istanbul": "^0.4.5",
     "jsonwebtoken": "^8.5.0",
     "mocha": "^6.0.2",
-    "mongoose": "^5.7.5",
+    "mongoose": "^5.12.2",
     "morgan": "~1.9.1",
     "nodemailer": "^5.1.1",
     "nyc": "^13.3.0",
