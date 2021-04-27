@@ -18,7 +18,7 @@
     "commander": "^2.19.0",
     "compression": "^1.7.3",
     "connect-flash": "^0.1.1",
-    "connect-redis": "^3.4.0",
+    "connect-redis": "^4.0.0",
     "consolidate": "^0.15.1",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
@@ -43,9 +43,9 @@
     "passport-local": "^1.0.0",
     "pug": "2.0.3",
     "raven": "^2.6.4",
-    "redis": "^2.8.0",
-    "socket.io": "^2.2.0",
-    "socket.io-client": "^2.2.0",
-    "validator": "^10.11.0"
+    "redis": "^3.1.1",
+    "socket.io": "^3.0.0",
+    "socket.io-client": "^4.0.0",
+    "validator": "^13.6.0"
   }
 }
