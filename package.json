@@ -14,7 +14,7 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "chai": "^4.2.0",
-    "chai-http": "^4.2.1",
+    "chai-http": "^5.0.0",
     "commander": "^2.19.0",
     "compression": "^1.7.3",
     "connect-flash": "^0.1.1",
